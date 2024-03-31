@@ -8,3 +8,6 @@
 Project included creating an admin user and AWS credentials, as well as installing AWS CLI on Gitpod.
 
 The budget was created through AWS CLI on Gitpod based on the budget and budget notifications JSON-files on the AWS/JSON-folder. There is also a JSON file for the billing alarm. It required first a new SNS topic for which the subscription had to be confirmed via email. After that, the actual Cloudwatch alarm could be created through AWS CLI.
+
+### Create a Billing Alarm
+
