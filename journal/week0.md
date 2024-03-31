@@ -9,5 +9,7 @@ Project included creating an admin user and AWS credentials, as well as installi
 
 The budget was created through AWS CLI on Gitpod based on the budget and budget notifications JSON-files on the AWS/JSON-folder. There is also a JSON file for the billing alarm. It required first a new SNS topic for which the subscription had to be confirmed via email. After that, the actual Cloudwatch alarm could be created through AWS CLI.
 
-### Create a Billing Alarm
+### Create a Budget Alarm
+I created my own Budget for $1 because I was concerned of budget spending going over the 2 Budget free limit.
 
+![Image of the Budget Alarm I created](Assets/Budget.jpg)
