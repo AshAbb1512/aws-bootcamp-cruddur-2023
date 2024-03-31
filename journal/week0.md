@@ -3,7 +3,7 @@
 ![image](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/43376c37-8fe2-41e6-a9f3-dde3f3bc2be5)
 ## Logical Diagram
 ## I created this logical diagram through Lucidchart
-![image of the Logical Diagram](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/ce270818-8de2-4c4e-a0ca-bcbc1674d035) or ![Image of Logical diagram using Amazon ElastiCache]()
+![image of the Logical Diagram](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/ce270818-8de2-4c4e-a0ca-bcbc1674d035) or ![Image of Logical diagram using Amazon ElastiCache](Assets/Cruddur%20-%20Logical%20Diagram.png)
 ### AWS CLI, creating a budget and billing alarm
 Project included creating an admin user and AWS credentials, as well as installing AWS CLI on Gitpod.
 
