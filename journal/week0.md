@@ -3,7 +3,7 @@
 ![image](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/43376c37-8fe2-41e6-a9f3-dde3f3bc2be5)
 ## Logical Diagram
 ## I created this logical diagram through Lucidchart
-![image](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/ce270818-8de2-4c4e-a0ca-bcbc1674d035)
+![image of the Logical Diagram](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/ce270818-8de2-4c4e-a0ca-bcbc1674d035) 
 ### AWS CLI, creating a budget and billing alarm
 Project included creating an admin user and AWS credentials, as well as installing AWS CLI on Gitpod.
 
@@ -13,3 +13,4 @@ The budget was created through AWS CLI on Gitpod based on the budget and budget 
 I created my own Budget for $1 because I was concerned of budget spending going over the 2 Budget free limit.
 
 ![Image of the Budget Alarm I created](Assets/Budget.jpg)
+
