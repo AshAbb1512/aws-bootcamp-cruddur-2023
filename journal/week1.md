@@ -28,3 +28,5 @@ open the link for 4567 in your browser
 append to the url to /api/activities/home
 you should get back json
 
+[image](![Running Frontend and Backend on Gitpod for Adding Docker](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/13ab21dc-a03c-4dbb-bfb3-70b62f73b7a3)
+)
