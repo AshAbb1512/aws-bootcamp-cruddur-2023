@@ -53,9 +53,12 @@ CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 
 ## Building A Docker Container
 
+
 docker build -t  backend-flask ./backend-flask
 
 ## Run A Container
+##  Use port mapping
+Port mapping is a feature in Docker that allows you to 'expose' a specific service running on a particular port of the host machine to a Docker container.Suppose I have a web server running on your host machine on port 4567. To make this service accessible to a Docker container, I can map port 4567 of the host to port 4567 of the container. This is achieved using the following command:
 
 docker run --rm -p 4567:4567 -it backend-flask
 
