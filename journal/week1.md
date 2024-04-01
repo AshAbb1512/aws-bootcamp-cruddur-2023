@@ -61,5 +61,9 @@ docker build -t  backend-flask ./backend-flask
 Port mapping is a feature in Docker that allows you to 'expose' a specific service running on a particular port of the host machine to a Docker container.Suppose I have a web server running on your host machine on port 4567. To make this service accessible to a Docker container, I can map port 4567 of the host to port 4567 of the container. This is achieved using the following command:
 
 docker run --rm -p 4567:4567 -it backend-flask
+
+## Get Container Images or Running Container Ids
+docker ps
+docker images
 [image](![Running Frontend and Backend on Gitpod for Adding Docker]([https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/13ab21dc-a03c-4dbb-bfb3-70b62f73b7a3](https://4567-ash01512-awsbootcampcru-sn7ozkl0pfn.ws-us110.gitpod.io/api/activities/home))
 )
