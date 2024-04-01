@@ -6,7 +6,9 @@
 Running frontend and backend locally on Gitpod
 To run the backend locally, I copied the commands from the Dockerfile, first installing pip and then running the command for flask. I also had to set the environment variables (frontendurl & backendurl) to * or otherwise, I kept getting 404 error. 
 ## Run Python
+
 cd backend-flask
+
 pip3 install -r requirements.txt
 export FRONTEND_URL="*"
 export BACKEND_URL="*"
