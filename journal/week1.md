@@ -3,7 +3,7 @@
 
 ## My required task this week included containerizing My application (frontend and backend), making additions to frontend and backend applications and making sure I can run DynamoDB and Postgres containers. Below are the steps I completed for the required task:
 
-## Running frontend and backend locally on Gitpod.
+## Running frontend and backend locally on Gitpod
 
 Running frontend and backend locally on Gitpod
 To run the backend locally, I copied the commands from the Dockerfile, first installing pip and then running the command for flask. I also had to set the environment variables (frontendurl & backendurl) to * or otherwise, I kept getting 404 error. 
