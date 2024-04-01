@@ -1,4 +1,4 @@
-# Iek 1 — App Containerization
+# Week 1 — App Containerization
 ## Required Task
 
 ## My required task this week included containerizing My application (frontend and backend), making additions to frontend and backend applications and making sure I can run DynamoDB and Postgres containers. Below are the steps I completed for the required task:
