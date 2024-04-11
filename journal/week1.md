@@ -8,26 +8,7 @@
 Running frontend and backend locally on Gitpod
 To run the backend locally, I copied the commands from the Dockerfile, first installing pip and then running the command for flask. I also had to set the environment variables (frontendurl & backendurl) to * or otherwise, I kept getting 404 error. 
 
-# Containerize Backend
-## Add Dockerfile
-
-## 1st Step: Create a file here: backend-flask/Dockerfile
-
-FROM python:3.10-slim-buster
-
-WORKDIR /backend-flask
-
-COPY requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt
-
-COPY . .
-
-ENV FLASK_ENV=development
-
-EXPOSE ${PORT}
-CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
-
-## Run Flask
+## Run Flask Back End Server locally and Dockerize it
 ## Prepared the python environment in my working directory by installing dependencies, setting environment variables for CORS, running the below command and unlocking the gitpod port:
 
 cd backend-flask
@@ -53,6 +34,22 @@ you should get back json
 [image](![Running Frontend and Backend on Gitpod for Adding Docker](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/13ab21dc-a03c-4dbb-bfb3-70b62f73b7a3)
 )
 
+# Containerize Backend
+## Add Dockerfile
+
+FROM python:3.10-slim-buster
+
+WORKDIR /backend-flask
+
+COPY requirements.txt requirements.txt
+RUN pip3 install -r requirements.txt
+
+COPY . .
+
+ENV FLASK_ENV=development
+
+EXPOSE ${PORT}
+CMD [ "python3", "-m" , "flask", "run", "--host=0.0.0.0", "--port=4567"]
 
 ## Building A Docker Running Image = Container
 Return to repository root directory
