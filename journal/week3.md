@@ -14,7 +14,8 @@ The following information outlines tasks that I've completed for Week 3 of the A
 
 Set up a custom user pool in AWS Cognito with the right attributes.
 
-<img src=https://user-images.githubusercontent.com/20970865/224400181-dde03d8e-b591-4f4e-9734-be9d363dd5f2.PNG width="250">
+![Screenshot 2024-04-20 180029](https://github.com/Ash01512/aws-bootcamp-cruddur-2023/assets/159699976/3bf62c04-3507-4e17-9d26-77ff7d2554bf)
+
 
 6. Implement Custom Signin And Confirmation Pages	
 
