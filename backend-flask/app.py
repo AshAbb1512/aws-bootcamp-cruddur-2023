@@ -60,7 +60,7 @@ provider.add_span_processor(processor)
 
 # Rollbar -----------
 rollbar_access_token = os.getenv('ROLLBAR_ACCESS_TOKEN')
-@app.before_first_request
+@app.before_first_request # type: ignore
 def init_rollbar():
     """init rollbar module"""
     rollbar.init(
@@ -155,6 +155,7 @@ def data_home():
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
+@xray_recorder.capture('activities_home')
 def data_home():
   data = NotificiationsActivities.run()
   return data, 200
@@ -191,6 +192,7 @@ def data_activities():
   return
 
 @app.route("/api/activities/<string:activity_uuid>", methods=['GET'])
+@xray_recorder.capture('activities_show')
 def data_show_activity(activity_uuid):
   data = ShowActivities.run(activity_uuid=activity_uuid)
   return data, 200
