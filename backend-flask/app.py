@@ -16,7 +16,7 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
-from lib.cognito_token_verification import CognitoTokenVerification
+from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
 
 
 #HoneyComb ------------------------
@@ -88,7 +88,7 @@ trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
-cognito_token_verification = CognitoTokenVerification()
+cognito_jwt_token = CognitoTokenVerification()
 user_pool_id=os.getenv(""),
 user_pool_client_id=os.getenv(""),
 region=os.getenv(""):
