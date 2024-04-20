@@ -21,7 +21,8 @@ Set up a custom user pool in AWS Cognito with the right attributes.
 
 Implemented a custom signin page leveraging AWS Cognito. Tested and confirmed login. Files changed: [docker-compose.yml](https://github.com/Gamerrethink/aws-bootcamp-cruddur-2023/blob/week-3/docker-compose.yml), [app.js](https://github.com/Gamerrethink/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/App.js), [HomeFeedPage.js](https://github.com/Gamerrethink/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/HomeFeedPage.js), [SigninPage.js](https://github.com/Gamerrethink/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/SigninPage.js), and [ConfirmationPage.js](https://github.com/Gamerrethink/aws-bootcamp-cruddur-2023/blob/week-3/frontend-react-js/src/pages/ConfirmationPage.js).
 
-<img src=https://user-images.githubusercontent.com/20970865/224401526-c8e0f353-63cf-4e68-afa5-72a883cf2ebc.PNG width="450">
+![Uploading Screenshot 2024-04-20 141314.png…]()
+
 
 7. Implement Custom Signup Page	
 
