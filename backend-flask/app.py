@@ -88,11 +88,12 @@ trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
-cognito_jwt_token = CognitoTokenVerification()
-user_pool_id=os.getenv(""),
-user_pool_client_id=os.getenv(""),
-region=os.getenv(""):
 
+cognito_jwt_token = CognitoJwTToken(
+  user_pool_id=os.getenv(""),
+  user_pool_client_id=os.getenv(""),
+  region=os.getenv(""):
+)
 #X-RAY--------------
 XRayMiddleware(app, xray_recorder)
 
@@ -160,9 +161,21 @@ def data_create_message():
 
 @app.route("/api/activities/home", methods=['GET'])
 def data_home():
-  data = HomeActivities.run()
-  app.logger.debug('claims')
-  return data, 200
+
+access_token = CognitoJwTToken.extract_access_token(request.headers)
+try:
+  self.token_service.verify(access_token)
+  self.claims = self.token_service.claims
+  g.cognito_claims = self.claims
+  except TokenVerifyError as e:
+  _ = request.data
+  abort(make_response(jsonify(message=str(e)), 401))
+
+app.logger.debug('claims')
+app.logger.debug(claims['username'])
+data = HomeActivities.run(cognito_user_id=claims['username'])
+
+return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
 @xray_recorder.capture('activities_home')
