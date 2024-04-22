@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta, timezone
-
 from arrow import now
 class NotificiationsActivities:
   def run(): 

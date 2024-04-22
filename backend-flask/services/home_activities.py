@@ -41,7 +41,7 @@ class HomeActivities:
     ]
     if cognito_user_id != None:
     
-    extra_crud = {
+        extra_crud = {
       'uuid': '248959df-3079-4947-b847-9e0892d1bab4',
       'handle':  'Garek',
       'message': 'My dear doctor, I am just simple tailor',
@@ -52,5 +52,5 @@ class HomeActivities:
     }
 
     results.insert(0,extra_crud)
-    span.set_attributes("app.result_length," len(results))
+    #span.set_attributes("app.result_length," len(results))
     return results

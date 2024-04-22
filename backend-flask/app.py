@@ -16,7 +16,7 @@ from services.messages import *
 from services.create_message import *
 from services.show_activity import *
 
-from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
+# from lib.cognito_jwt_token import CognitoJwtToken, extract_access_token, TokenVerifyError
 
 
 #HoneyComb ------------------------
@@ -83,17 +83,16 @@ def init_rollbar():
 # Show this in the logs within the backend-flask (STDOUT)
 simple_processor = SimpleSpanProcessor(ConsoleSpanExporter())
 provider.add_span_processor(simple_processor)
-
 trace.set_tracer_provider(provider)
 tracer = trace.get_tracer(__name__)
 
 app = Flask(__name__)
 
-cognito_jwt_token = CognitoJwTToken(
-  user_pool_id=os.getenv(""),
-  user_pool_client_id=os.getenv(""),
-  region=os.getenv(""):
-)
+#cognito_jwt_token = CognitoJwTToken(
+  #user_pool_id=os.getenv(""),
+  #user_pool_client_id=os.getenv(""),
+  #region=os.getenv("")
+#)
 #X-RAY--------------
 XRayMiddleware(app, xray_recorder)
 
@@ -159,23 +158,23 @@ def data_create_message():
     return model['data'], 200
   return
 
-@app.route("/api/activities/home", methods=['GET'])
-def data_home():
+#@app.route("/api/activities/home", methods=['GET'])
+#def data_home():
 
-access_token = CognitoJwTToken.extract_access_token(request.headers)
-try:
-  self.token_service.verify(access_token)
-  self.claims = self.token_service.claims
-  g.cognito_claims = self.claims
-  except TokenVerifyError as e:
-  _ = request.data
-  abort(make_response(jsonify(message=str(e)), 401))
+#access_token = CognitoJwTToken.extract_access_token(request.headers)
+#try:
+ # self.token_service.verify(access_token)
+ # self.claims = self.token_service.claims
+ # g.cognito_claims = self.claims
+ # except TokenVerifyError as e:
+ # _ = request.data
+ # abort(make_response(jsonify(message=str(e)), 401))
 
-app.logger.debug('claims')
-app.logger.debug(claims['username'])
-data = HomeActivities.run(cognito_user_id=claims['username'])
+#app.logger.debug('claims')
+#app.logger.debug(claims['username'])
+#data = HomeActivities.run(cognito_user_id=claims['username'])
 
-return data, 200
+# return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
 @xray_recorder.capture('activities_home')
@@ -193,14 +192,14 @@ def data_handle(handle):
     return model['data'], 200
 
 @app.route("/api/activities/search", methods=['GET'])
-def data_search():
-  term = request.args.get('term')
-  model = SearchActivities.run(term)
-  if model['errors'] is not None:
-    return model['errors'], 422
-  else:
-    return model['data'], 200
-  return
+#def data_search():
+ # term = request.args.get('term')
+ # model = SearchActivities.run(term)
+ # if model['errors'] is not None:
+  #  return model['errors'], 422
+  #else:
+   # return model['data'], 200
+  #return
 
 @app.route("/api/activities", methods=['POST','OPTIONS'])
 @cross_origin()
