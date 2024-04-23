@@ -15,3 +15,5 @@ rollbar
 aws-xray-sdk
 
 Flask-AWSCognito
+
+boto3
