@@ -23,27 +23,15 @@ response = client.create_table(
    
     KeySchema=[
         {
-            'AttributeName': 'string',
-            'KeyType': 'HASH'|'RANGE'
+            'AttributeName': 'pk',
+            'KeyType': 'HASH'
         },
-    ],
-    LocalSecondaryIndexes=[
         {
-            'IndexName': 'string',
-            'KeySchema': [
-                {
-                    'AttributeName': 'string',
-                    'KeyType': 'HASH'|'RANGE'
-                },
-            ],
-            'Projection': {
-                'ProjectionType': 'ALL'|'KEYS_ONLY'|'INCLUDE',
-                'NonKeyAttributes': [
-                    'string',
-                ]
-            }
+            'AttributeName': 'sk',
+            'KeyType': 'RANGE'
         },
     ],
+    
     GlobalSecondaryIndexes=[
         {
             'IndexName': 'string',
