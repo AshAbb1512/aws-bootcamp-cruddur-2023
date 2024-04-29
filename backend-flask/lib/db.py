@@ -1,4 +1,4 @@
-from psycopg_pool import ConnectionPool
+from psycopg_pool import ConnectionPool 
 import os
 import re
 import sys
