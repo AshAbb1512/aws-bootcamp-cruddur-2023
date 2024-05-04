@@ -16,6 +16,10 @@ table_name = 'cruddur-message'
 response = ddb.create_table(
      TableName=table_name,
     AttributeDefinitions=[
+          {
+            'AttributeName': 'message_group_uuid',
+            'AttributeType': 'S'
+        },
         {
             'AttributeName': 'pk',
             'AttributeType': 'S'
